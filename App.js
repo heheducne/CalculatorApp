@@ -33,7 +33,7 @@ export default function App() {
         return setResultText(
           resultText.toString().substring(0, resultText.length - 1)
         );
-    }
+    }}
     if (operation == "AC") {
       setResultText("");
       setCalcText(0);
