@@ -1,4 +1,4 @@
-function infixToPostfix(input) {
+export function infixToPostfix(input) {
     let stack = [], answer = [], char;
     const operands = {
       '+': 1,
@@ -17,7 +17,7 @@ function infixToPostfix(input) {
         else if (char==")"){
           while (stack[stack.length - 1] != "(") {
             answer.push(stack.pop());
-            peek = operands[stack[stack.length - 1]];
+            let peek = operands[stack[stack.length - 1]];
           }
           stack.pop();
         }
@@ -40,7 +40,7 @@ function infixToPostfix(input) {
     }
     return answer.join(' ');
   }
-  function executePostfix(str) {
+  export function executePostfix(str) {
     let stack = [], operand1, operand2, tempOperand;
     let operators = ['+', '-', '*', '/', '√', '^', '!','%'];
     for (let char of str.split(' ')) {
