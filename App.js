@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import reactDom from "react-dom";
 import { StyleSheet, View, Text, TouchableOpacity, Button } from "react-native";
-import {infixToPostfix, executePostfix} from "./calcu.js"
+import {fix_str} from "./calcu.js"
 let count_brackets = 0;
 let flag_num = 0;
 export default function App() {
@@ -16,9 +16,7 @@ export default function App() {
 
   const calculateResult = () => {
     try{
-      let expression = infixToPostfix(resultText)
-      console.log(expression)
-      setCalcText(executePostfix(expression))
+      setCalcText(eval(fix_str(resultText)))
     }
     catch(err){
       setCalcText("Syntax error");
@@ -47,7 +45,6 @@ export default function App() {
       setCalcText(0);
       return;
     }
-    if (operations.includes(resultText.toString().split("").pop())) return;
     setResultText(resultText + operation);
   };
 
@@ -232,7 +229,11 @@ export default function App() {
 
         <View style={styles.operations}>
             <TouchableOpacity
-              onPress={() => onOperationClick("√")}
+              onPress={() => {
+                onOperationClick("√(");
+                count_brackets++
+                flag_num=1;
+              }}
               style={styles.btn}
             >
               <Text style={styles.operationButton}>√</Text>
