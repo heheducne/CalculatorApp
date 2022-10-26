@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import reactDom from "react-dom";
 import { StyleSheet, View, Text, TouchableOpacity, Button } from "react-native";
-
+let count_brackets = 0;
+let flag_num = 0;
 export default function App() {
   const [resultText, setResultText] = useState("");
   const [calcText, setCalcText] = useState("");
@@ -13,16 +14,25 @@ export default function App() {
   };
 
   const calculateResult = () => {
-    setCalcText(eval(resultText));
+    setCalcText(eval(resultText))
   };
 
   const onOperationClick = (operation) => {
     let operations = ["DEL", "+", "-", "*", "/","..."];
 
     if (operation == "DEL") {
-      return setResultText(
-        resultText.toString().substring(0, resultText.length - 1)
-      );
+      if (resultText.toString().length != 0){
+        if (resultText.slice(-1)=='('){
+          count_brackets--;
+          if(count_brackets==0) {flag_num=0;
+          // console.log("clgt")}
+        }}
+        if (resultText.slice(-1)==')'){
+          count_brackets++
+          if (count_brackets!=0){flag_num=1;}}
+        return setResultText(
+          resultText.toString().substring(0, resultText.length - 1)
+        );
     }
     if (operation == "AC") {
       setResultText("");
@@ -82,19 +92,28 @@ export default function App() {
 
           <View style={styles.row}>
             <TouchableOpacity
-                onPress={() => onButtonClick(1)}
+                onPress={() => {
+                  onButtonClick(1);
+                  if (count_brackets!=0) {flag_num = 1;}
+                }}
                 style={styles.btn}
               >
                 <Text style={styles.number}>1</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => onButtonClick(2)}
+                onPress={() => {
+                  onButtonClick(2);
+                  if (count_brackets!=0) {flag_num = 1;}
+                }}
                 style={styles.btn}
               >
                 <Text style={styles.number}>2</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => onButtonClick(3)}
+                onPress={() => {
+                  onButtonClick(3);
+                  if (count_brackets!=0) {flag_num = 1;}
+                }}
                 style={styles.btn}
               >
                 <Text style={styles.number}>3</Text>
@@ -104,19 +123,28 @@ export default function App() {
 
           <View style={styles.row}>
           <TouchableOpacity
-              onPress={() => onButtonClick(4)}
+              onPress={() => {
+                onButtonClick(4);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>4</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(5)}
+              onPress={() => {
+                onButtonClick(5);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>5</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(6)}
+              onPress={() => {
+                onButtonClick(6);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>6</Text>
@@ -126,19 +154,28 @@ export default function App() {
 
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick(7)}
+              onPress={() => {
+                onButtonClick(7);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>7</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(8)}
+              onPress={() => {
+                onButtonClick(8);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>8</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(9)}
+              onPress={() => {
+                onButtonClick(9);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>9</Text>
@@ -147,7 +184,10 @@ export default function App() {
 
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick(0)}
+              onPress={() => {
+                onButtonClick(0);
+                if (count_brackets!=0) {flag_num = 1;}
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>0</Text>
@@ -161,7 +201,17 @@ export default function App() {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => onButtonClick("()")}
+              onPress={() => {
+                if (flag_num == 0) {
+                  onOperationClick("(") 
+                  count_brackets++;
+                }
+                else {
+                  onOperationClick(")")
+                  count_brackets--;
+                  if (count_brackets==0) {flag_num = 0;}
+                } 
+              }}
               style={styles.btn}
             >
               <Text style={styles.number}>( )</Text>
