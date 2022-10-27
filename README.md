@@ -24,6 +24,7 @@ CS536
 
 #### Hướng dẫn sử dụng: 
    - git clone về máy
+   - cd tới thư mục CalculatorApp
    - Trên terminal gõ npm install
    - Trên terminal gõ npm add expo
    - Gõ npm start
