@@ -13,18 +13,18 @@ CS536
    - Search
    
 #### Group members:
-  - Cao Khắc Tuân
-  - Bùi Hữu Đức
-  - Hoàng Cong Danh
-  - Nguyễn Cao Thắng
-  
+ 
+|      Name        |   MSSV   |
+|------------------|----------|
+| Cao Khắc Tuân    | 20520841 |
+| Bùi Hữu Đức      | 20520449 |
+| Hoàng Công Danh  | 20520431 |
+| Nguyễn Cao Thắng | 20520758 |
+
 #### Hướng dẫn sử dụng: 
    - git clone về máy
    - Trên terminal gõ npm install
    - Trên terminal gõ npm add expo
    - Gõ npm start
-### Lưu ý: 
-   - Nếu gặp lỗi process is not definded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
-   - Nếu gặplỗi "Error message "error:0308010C:digital envelope routines::unsupported":
-      + Đối với Linux: mở terminal và paste lệnh:   export NODE_OPTIONS=--openssl-legacy-provider
-      + Đối với windơ: mở cmd và paste lệnh: set NODE_OPTIONS=--openssl-legacy-provider
+### Lưu ý: Nếu gặp lỗi process is undefinded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
+   
