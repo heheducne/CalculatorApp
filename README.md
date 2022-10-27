@@ -24,7 +24,7 @@ CS536
    - Trên terminal gõ npm add expo
    - Gõ npm start
 ### Lưu ý: 
-   - Nếu gặp lỗi process is undefinded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
+   - Nếu gặp lỗi process is not definded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
    - Nếu gặplỗi "Error message "error:0308010C:digital envelope routines::unsupported":
       + Đối với Linux: mở terminal và paste lệnh:   export NODE_OPTIONS=--openssl-legacy-provider
       + Đối với windơ: mở cmd và paste lệnh: set NODE_OPTIONS=--openssl-legacy-provider
