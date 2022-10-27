@@ -24,7 +24,7 @@ export default function App() {
   };
 
   const onOperationClick = (operation) => {
-    let operations = ["DEL", "+", "-", "*", "/","..."];
+    let operations = ["DEL", "+", "-", "*", "/"];
 
     if (operation == "DEL") {
       if (resultText.toString().length != 0){
@@ -52,15 +52,6 @@ export default function App() {
     <View style={styles.container}>
       
       <View style={styles.result}>
-        <View style= {styles.history}>
-          <Text style={styles.operationButton}>...</Text>
-            <TouchableOpacity
-                onPress={() => onOperationClick("...")}
-                style={styles.btn}
-              >
-                {/* <Text style={styles.operationButton}>...</Text> */}
-              </TouchableOpacity>
-        </View>
         <Text style={styles.resultText}>{calcText}</Text>
       </View>
 
@@ -225,8 +216,6 @@ export default function App() {
           </View>
         </View>
 
-
-
         <View style={styles.operations}>
             <TouchableOpacity
               onPress={() => {
@@ -305,9 +294,18 @@ export default function App() {
               <Text style={styles.operationButton}>=</Text>
             </TouchableOpacity>
           </View>
+        <View style={styles.history}>
+          <Text style={styles.historytext}>History</Text>
+            {/* <FlatList
+            data={search_history}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+            /> */}
+          </View>
 
-      </View>
-    </View>
+        </View>
+
+    </View>  
   );
 }
 const styles = StyleSheet.create({
@@ -320,8 +318,8 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
     justifyContent: "center",
     alignItems: "flex-end",
-    borderBottomEndRadius:70,
-    borderBottomStartRadius:70,
+    borderTopEndRadius:70,
+    borderTopStartRadius:70,
 
   },
   calculation: {
@@ -329,10 +327,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#d6d6c2",
     justifyContent: "center",
     alignItems: "flex-end",
-    borderBottomEndRadius:70,
-    borderBottomStartRadius:70,
-    borderTopEndRadius:70,
-    borderTopStartRadius:70,
+
   },
   numbers: {
     flex: 3,
@@ -340,7 +335,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   buttons: {
-    flex: 7,
+    flex: 6,
     flexDirection: "row",
   },
   row: {
@@ -355,37 +350,39 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
   },
-
+  history:{
+    flex: 2,
+    backgroundColor: "grey",
+  },
   resultText: {
-    fontSize: 150,
+    fontSize: 100,
     color: "white",
     fontWeight: "bold",
   },
   calculationText: {
     color: "black",
     fontWeight: "bold",
-    fontSize: 150
+    fontSize: 100
   },
   number: {
-    fontSize: 100,
+    fontSize: 70,
     color: "white",
   },
   btn: {
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "stretch",
-    fontSize: 100,
+    fontSize: 70,
   },
   operationButton: {
-    fontSize: 90,
+    fontSize: 70,
     color: "orange",
     fontWeight: "bold",
   },
-  history:{
-    flex:2,
-    position: 'absolute',
-    bottom:150,
-    left:20,
+  historytext:{
+    fontSize: 70,
+    color: "yellow",
+    fontWeight: "bold",
   }
 }
 );
