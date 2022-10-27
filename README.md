@@ -23,5 +23,5 @@ CS536
    - Trên terminal gõ npm install
    - Trên terminal gõ npm add expo
    - Gõ npm start
-### Lưu ý: Nếu gặp lỗi process is undefinded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js)
+### Lưu ý: Nếu gặp lỗi process is undefinded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
    
