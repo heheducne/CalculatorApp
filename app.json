@@ -1,7 +1,7 @@
 {
   "type": "module",
   "expo": {
-    "name": "AwesomeProject",
+    "name": "Calculator",
     "slug": "AwesomeProject",
     "version": "1.0.0",
     "orientation": "portrait",
