@@ -22,15 +22,16 @@ CS536
 | Hoàng Công Danh  | 20520431 |
 | Nguyễn Cao Thắng | 20520758 |
 
-#### Hướng dẫn sử dụng: 
-   - git clone về máy
-   - cd tới thư mục CalculatorApp
-   - Trên terminal gõ npm install
-   - Trên terminal gõ npm add expo
-   - Gõ npm start
+#### Instruction: 
+   - git clone to device
+   - change directory to folder CalculatorApp
+   - Open terminal
+   - On terminal type npm install
+   - Then on terminal type npm add expo
+   - Finally, type npm start
    
-### Lưu ý: 
-   - Nếu gặp lỗi process is not definded, vui lòng bấm ctrl+s hoặc save hai file (App.js và calcu.js) rồi gõ refesh lại ứng dụng
-   - Nếu gặp lỗi "Error message "error:0308010C:digital envelope routines::unsupported":
-      + Đối với Linux: mở terminal và paste lệnh:   export NODE_OPTIONS=--openssl-legacy-provider
-      + Đối với windơ: mở cmd và paste lệnh: set NODE_OPTIONS=--openssl-legacy-provider
+### Warning: 
+   - If meet "process is not definded" , please ctrl+s or save two file (App.js and calcu.js) then refresh App.
+   - If meet "Error message "error:0308010C:digital envelope routines::unsupported":
+      + Linux: open terminal and paste command:   export NODE_OPTIONS=--openssl-legacy-provider
+      + Window: open cmd and paste command: set NODE_OPTIONS=--openssl-legacy-provider
