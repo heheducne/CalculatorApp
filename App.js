@@ -356,10 +356,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor:"#434343"
   },
   result: {
     flex: 2.5,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor: "grey",
     justifyContent: "center",
     alignItems: "flex-end",
@@ -369,6 +373,8 @@ const styles = StyleSheet.create({
   },
   calculation: {
     flex: 2,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor: "#d6d6c2",
     justifyContent: "center",
     alignItems: "flex-end",
@@ -376,27 +382,37 @@ const styles = StyleSheet.create({
   },
   numbers: {
     flex: 3,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor: "#434343",
     justifyContent: "space-around",
   },
   buttons: {
     flex: 6,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     flexDirection: "row",
   },
   row: {
     flexDirection: "row",
     flex: 1,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     justifyContent: "space-around",
     alignItems: "center",
   },
   operations: {
     flex: 1,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor: "#434343",
     alignItems: "center",
     justifyContent: "space-around",
   },
   history:{
     flex: 2,
+    flexWrap:'wrap',
+    alignContent:'stretch',
     backgroundColor: "grey",
   },
   resultText: {
