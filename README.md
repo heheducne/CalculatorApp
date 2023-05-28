@@ -1,7 +1,32 @@
-CS536
+<p align="center">
+   <a href="https://www.uit.edu.vn/">
+      <img src="https://i.imgur.com/WmMnSRt.png" border="none">
+   </a>
+</p>
+<h1 align="center">
+    CS526.N11.KHCL - Multi Media Mobile App Developing
+</h1>
 
-# CalculatorApp
-### A simple calculator application works on both web and phone
+<h2>
+   Subject description
+</h2>
+
+- **Subject name:** Multi Media Mobile App Developing
+- **Subject code:** CS526
+- **Class code:** CS526.N11.KHCL
+- **Year:** HK2 (2022-2023)
+- **Lecturer:** ThS. Phạm Nguyễn Trường An
+
+<h2>
+  Project name
+</h2>
+
+- **Project name:** Mobile Caculator
+
+<h3>
+  Project description
+</h3>
+A simple calculator application works on both web and phone
 [![My Skills](https://skills.thijs.gg/icons?i=js,react)](https://skills.thijs.gg)
 
 
